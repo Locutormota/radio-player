@@ -1,38 +1,203 @@
 <!DOCTYPE html>
-<html>
+<html lang="pt-br">
 <head>
-	<meta charset=utf-8>
-		</head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Player Responsivo</title>    
+    <link type="text/CSS" rel="stylesheet" href="CSS/style.css">
+</head>
+<body>
+   <div class="container">
+<div id="nav">
+
+        
+        
+        <div id="player">
+            <audio src="https://server14.srvsh.com.br:7320/stream/"></audio>
+            
+            <img onclick="play()"src="https://blogger.googleusercontent.com/img/a/AVvXsEhy4RtFSFxDSYQys0JNrJKrMTfExOF34s96a6yr6pmVWvChSx17-5-v_8lgi-_9eapKD6spzdiZE_7HV4kSO24oxCbrGVXIpF3BCCN-rtYAtriaoc4fgIo7pMxRYqeHgXKGrRpMYoQ6I7dQj7yf-hQjFJitUNgPWYIxlGdaDtyKb4Hxzo53BLufeIgbyg=s1600" id="play" title="Ouça Agora" > &nbsp;
+            <img onclick="pause()"src="https://blogger.googleusercontent.com/img/a/AVvXsEj0xaTBV_eYPnpFt8jAeOaN4qXGtjX0FkYKIUPht-7rZLMZNDD_XmMPXTyOr-NyPYXhkDQ11LK67XpH7RAeNf7QOJR0_vK54n-fah_rlryfMhH1yL_Thg7KkNarMxdVgR9R8DB51tRkMrBCEabzeerzepjCbWg0AfEF3xc6Si8D2nJ8FvUjgBwgOBKX4g=s1600" id="pause" title="Ouvindo" >&nbsp;&nbsp; 
+            
+            <script>
+            {
+                
+                document.querySelector("#play").style.display = "block";
+                document.querySelector("#pause").style.display = "none";
+                
+            }
+    
+            var audio = document.querySelector("audio")
+            function pause(){
+                audio.pause();
+                document.querySelector("#pause").style.display = "none";
+                document.querySelector("#play").style.display = "block";
+                
+            }
+
+            var audio = document.querySelector("audio")
+            function play() {
+                audio.play();
+                document.querySelector("#play").style.display = "none";
+                document.querySelector("#pause").style.display = "block";
+               
+               
+               }
+            </script>
+             
+
+</div>
+</div>
+</div>
 
 <style>
-	body{
-		background-color: #000000;
-	}	
-	
-@-moz-keyframes spin { 100% { -moz-transform: rotate(360deg); } }
-@-webkit-keyframes spin { 100% { -webkit-transform: rotate(360deg); } }
-@keyframes spin { 100% { -webkit-transform: rotate(360deg); transform:rotate(360deg); } }
+*{
+    margin: 0;
+    padding: 0;
+}
+
+
+:root{
+
+    /*tabela de cores  */
+    --cinza: #3f4954;
+    --vermelho: red;
+    --zul: blue;
+    --amarelo: yellow;
+    --amarelomassa: orange;
+    --roxo:purple;
+    
+ 
+    
+
+    --webkit5: linear-gradient(to top, purple 0%, rgb(76, 4, 76) 100%);
+  
+    
+
+        
+    
+    }
+
+.container{
+    width: 100%;
+    height: 50vh;
+    position: fixed;
+    
+
+ 
+                         
+}
+
+#nav{
+    
+      background-image: var(--webkit5);
+
+    height: 10vh;
+}
+
+#player {
+   height: 3vh;
+   width: 4;
+   padding: 1vh;
+    display: flex;
+    position: absolute;
+    top: 2vh;
+    left: 51vh;
+}
+
+#player img{
+    cursor: pointer;
+   
+}
+
+#player p{
+    color: white;
+    font-family: var(--Abel);
+}
+
+#pause{
+    display: none;
+}
+
+@media(max-width:950px){
+    #player {
+        height: 3vh;
+        width: 4;
+        padding: 1vh;
+        display: flex;
+        position: absolute;
+        top: 2vh;
+        left: 51vh;
+}
+}
+
+@media(max-width:614px){
+    #player {
+        height: 3vh;
+        padding: 1vh;
+        display: flex;
+        position: absolute;
+        top: 2vh;
+        left: 39vh;
+}
+}
+
+
+@media(max-width:500px){
+    #player {
+        height: 3vh;
+        padding: 1vh;
+        display: flex;
+        position: absolute;
+        top: 2vh;
+        left: 35vh;
+}
+}
+
+
+
+@media(max-width:468px){
+    #player {
+        height: 3vh;
+        padding: 1vh;
+        display: flex;
+        position: absolute;
+        top: 2vh;
+        left: 18vh;
+}
+}
+
+@media(max-width:372px){
+    #player {
+        height: 3vh;
+        padding: 1vh;
+        display: flex;
+        position: absolute;
+        top: 2vh;
+        left: 9vh;
+}
+}
+@media(max-width:246px){
+    #player {
+        height: 3vh;
+        padding: 1vh;
+        display: flex;
+        position: absolute;
+        top: 2vh;
+        left: 5vh;
+        
+}
+}
+@media(max-width:246px){
+    #player img{
+    cursor: pointer;
+    width: 8vh;
+    height: 2vh;
+   
+}
+}
+ 
 
 </style>
-
-	
-	<body>
-		<audio id="audio" preload controls="controls" autoplay>
-			<source src="https://stream.zeno.fm/z5ua73hagc9uv">
-        </audio>
-		
-		<div style="width: 75%; margin-left: auto; margin-right: auto; overflow: hidden; height: 55px; padding-top: 5px;">
-		
-		<div style="overflow: hidden; float: left; margin-right: 3%;">
-			<span id="foto">
- 
-			
-		
-		
-				
-					
-			
-	
-			<script>var _0xb82c=["\x61\x75\x64\x69\x6F","\x67\x65\x74\x45\x6C\x65\x6D\x65\x6E\x74\x42\x79\x49\x64","\x70\x6C\x61\x79","\x61\x64\x64\x45\x76\x65\x6E\x74\x4C\x69\x73\x74\x65\x6E\x65\x72","\x74\x69\x6D\x65\x75\x70\x64\x61\x74\x65","\x70\x61\x75\x73\x65","\x63\x75\x72\x72\x65\x6E\x74\x54\x69\x6D\x65","\x76\x6F\x6C\x75\x6D\x65","\x6D\x75\x74\x65\x64","\x69\x6E\x6E\x65\x72\x48\x54\x4D\x4C","\x74\x65\x6D\x70\x6F\x5F\x61\x74\x75\x61\x6C","\x66\x6C\x6F\x6F\x72","\x30","\x3A"];audio=document[_0xb82c[1]](_0xb82c[0]);audio[_0xb82c[3]](_0xb82c[2],play_evento,false);audio[_0xb82c[3]](_0xb82c[4],atualizar,false);function play(){audio[_0xb82c[2]]()}function pause(){audio[_0xb82c[5]]()}function stop(){audio[_0xb82c[5]]();audio[_0xb82c[6]]=0}function aumentar_volume(){if(audio[_0xb82c[7]]<1){audio[_0xb82c[7]]+=0.1}}function diminuir_volume(){if(audio[_0xb82c[7]]>0){audio[_0xb82c[7]]-=0.1}}function mute(){if(audio[_0xb82c[8]]){audio[_0xb82c[8]]=false}else{audio[_0xb82c[8]]=true}}function play_evento(){document[_0xb82c[1]](_0xb82c[10])[_0xb82c[9]]=secToStr(audio[_0xb82c[6]])}function atualizar(){document[_0xb82c[1]](_0xb82c[10])[_0xb82c[9]]=secToStr(audio[_0xb82c[6]])}function secToStr(_0x6547xa){_0x6547xa=Math[_0xb82c[11]](_0x6547xa);var _0x6547xb=Math[_0xb82c[11]](_0x6547xa/3600);var _0x6547xc=Math[_0xb82c[11]]((_0x6547xa-(_0x6547xb*3600))/60);var _0x6547xd=_0x6547xa-(_0x6547xb*3600)-(_0x6547xc*60);if(_0x6547xb<10){_0x6547xb=_0xb82c[12]+_0x6547xb};if(_0x6547xc<10){_0x6547xc=_0xb82c[12]+_0x6547xc};if(_0x6547xd<10){_0x6547xd=_0xb82c[12]+_0x6547xd};var _0x6547xe=_0x6547xb+_0xb82c[13]+_0x6547xc+_0xb82c[13]+_0x6547xd;return _0x6547xe}</script>
-	</body>
+</body>
 </html>
